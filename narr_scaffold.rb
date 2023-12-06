@@ -35,7 +35,6 @@ end
 # p templ
 Oj.to_file("ntemplate.oj",templ,:mode=>:compat)
 
-=begin
 i=0
 renz=Hash.new
 CSV.foreach("ddRAD_EnzymeSelect.csv") do |row|
@@ -103,7 +102,7 @@ rrsites.each{|k,rcsites|
 		 	# 	p pt
 				# p csites[idx-1]
 		 		flen=pt - csites[idx-1]
-		 		if flen > 99 && flen < 201 then
+		 		if flen > 199 && flen < 501 then
 		 			tfrag << [csites[idx-1],pt]
 		 		end
 		 	end
@@ -116,7 +115,7 @@ rrsites.each{|k,rcsites|
 	# }
 }
 Oj.to_file("tgtfragment.oj",tgtfragment,:mode=>:compat)
-=end
+
 
 # tgtfragment.each{|k,d1|
 # 	d1.each{|reset,d2|
